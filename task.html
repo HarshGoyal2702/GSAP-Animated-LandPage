@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Entry Page</title>
+    <link rel="stylesheet" href="task.css" class="css" />
+  </head>
+  <body>
+    <div class="curtain curtain-1"></div>
+    <div class="curtain curtain-2"></div>
+    <div id="box">
+        <div class="main2">
+          <div class="top">
+              <h1 id="top-h">Iot Workshop</h1>
+          </div>
+          <div class="center">
+            <img class="image" src="VCE Logo.png" alt="">
+             <h2>Vaish College of Engineering</h2>
+             <p>The Power of V <br></p> 
+            </div>
+            <div class="bottom">
+              <h1 id="bottom-h">Iot Workshop</h1>
+          </div>
+        </div>
+        <canvas id="canvas"></canvas>
+        <div class="card">
+          <div class="content">
+            <div class="front">
+              <p>Thanks to Innaugrate the workshop</p>
+              <p>Here we start the 
+                <div class="button-wrapper">
+              <button class="confetti-button">Journey</button>
+            </div></p>
+            </div>
+            <div class="back">
+              Back to the Battle now!!!            </div>
+          </div>
+        </div>
+      </div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script> -->
+    <script>
+      const handleCurtain = () => {
+    curtain1.classList.add("move-left");
+    curtain2.classList.add("move-right");
+    setTimeout(function () {
+      curtain1.classList.add("none");
+      curtain2.classList.add("none");
+    }, 2000);
+  };
+
+  const curtains = document.querySelectorAll(".curtain");
+  const curtain1 = document.querySelector(".curtain-1");
+  const curtain2 = document.querySelector(".curtain-2");
+  curtains.forEach((curtain) => {
+    curtain.addEventListener("click", handleCurtain);
+  });
+  </script>
+  
+  <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="task.js"></script>
+  </body>
+  </html>
+
